@@ -1,0 +1,378 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+  <title>The Important Numbers on the Prospect Park Bike Lane</title>
+  <style>
+    body {
+      background-color: white;
+      font-family: Georgia;
+      font-size: 80%;
+    }
+    
+    a, a:visited {
+      color: #CC0000;
+    }
+    
+    #container {
+      width: 940px;
+    }
+
+    p {
+      line-height: 1.3;
+    }
+    
+  #container > div {
+    overflow: auto;
+  }
+  .before, .after { width: 450px; float: left; overflow: auto; }
+  .before { padding-right: 30px; }
+  
+  h1, h2 { 
+    padding: 0;
+    margin: 0;
+  }
+  
+  h1 {
+    font-size: 60px;
+    border-top: solid black 4px;
+    margin-top: 20px;
+  }
+  
+  h2 {
+    font-size: 40px;
+  }
+    
+  p {
+    font-size: 220%;
+    clear: left;
+  }
+  
+  .before p, 
+  .after p {
+    margin-top: 0;
+  }
+  .bar {
+    width: 100%;
+    height: 20px;
+    margin-bottom: 20px;
+    background-color: #F3F3F3;
+  }
+  .filler {
+    float: left;
+    height: 20px;
+  }
+  .filler.bad {
+    background-color: red;
+  }
+  .filler.very-bad {
+    background-color: #CC0000;
+  }
+  .filler.good {
+    background-color: green;
+  }
+  .filler .filler {
+    float: right;
+  }
+  strong.bad {
+    color: red;
+  }
+  strong.good {
+    color: green;
+  }
+  strong.very-bad {
+    color: #CC0000;
+  }
+  
+  .data {
+    display: none;
+  }
+  
+  h3 {
+    font-family: Helvetica;
+    font-weight: normal;
+    font-variant: small-caps;
+  }
+  
+  #container > div > p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .conclusion {
+    background: #E0E0E0;
+    padding: 5px;
+    font-size: 180%;
+  }
+  .secret {
+    text-align: left;
+    padding: 0;
+    margin: 0;
+    font-size: 45%;
+float: right;
+width: 500px;
+clear: both;
+  }
+  .tinynote {
+    font-size: 100%;
+    text-align: right;
+  }
+  #intro { clear: both; }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div class="secret">
+    <p><strong>Hi, I'm Soma.</strong> Catch me at <a href="http://twitter.com/dangerscarf">@dangerscarf</a>.</p>
+    <p>Live in NYC? I'm teaching a <a href="http://brooklynbrainery.com/courses/70-data-visualization">data visualization course</a> at <a href="http://brooklynbrainery.com/">Brooklyn Brainery</a> in April!</p>
+  </div>  
+  <div id="intro">
+      <h1>The Important Numbers on the PPW Bike Lane</h1>
+      <p>The <strong>Prospect Park West</strong> bike lane has generated a lot of controversy, and I don't understand
+        why. I looked at <a href="http://www.nyc.gov/html/dot/downloads/pdf/20110120_ppw.pdf">an ugly PDF full of numbers</a> from the DoT about it, and it's
+        made the street safer for bikes, pedestrians <em>and</em> cars.</p>
+      <p>I made this page this morning so you don't have to look at that ugly PDF. I'm not some crazy bicyclist, I'm 
+        just a guy who'd rather not <strong>get hit by anything with wheels</strong>.*</p>
+      <p class="tinynote">* Yes, that includes bikes.</p>
+      <p><strong>Shortcuts:</strong> <a href="#speeding">Speeding</a>, 
+                    <a href="#sidewalk">Sidewalk Safety</a>, 
+                    <a href="#popularity">Bike Lane Popularity</a>, 
+                    <a href="#salmoning">Salmoning</a>, 
+                    <a href="#throughput">Car Throughput</a>, 
+                    <a href="#congestion">Congestion</a>, 
+                    <a href="#safety">Safety</a>, 
+                    <a href="#conclusion">Conclusion</a>,
+                    <a href="#etc">Who am I?</a>,
+                    <a href="#math">Math + Data</a></p>
+    </div>
+
+    <a name="speeding"></a>
+    <div id="speeding">
+      <h1>Speeding</h1>
+        <p>The <strong>DoT</strong> measured the speed of 100 cars morning, afternoon and night.</p>
+        <div class="before">
+          <h3>Before the bike lane...</h3>
+          <p>Almost <strong class="bad">3 out of 4 cars were speeding</strong>.</p>
+          <div class="bar">
+            <div class="filler bad" style="width: 74%">
+              <div class="filler very-bad" style="width: 20%"></div>            
+            </div>
+          </div>
+
+          <p><strong class="very-bad">47 of those cars</strong> were going at least <strong>10 miles over</strong> the speed limit.</p>
+          <div class="data"></div>
+        </div>
+        <div class="after">
+          <h3>After the bike lane...</h3>
+          <p>Speeding was <strong class="good">reduced by 75%</strong> to 1 out of 5 cars.</p>
+          <div class="bar">
+            <div class="filler good" style="width: 20%"></div>
+          </div>
+          <p>Only <strong class="good">2 cars</strong> went 10 miles faster than the speed limit.</p>
+          <div class="data"></div>
+        </div>
+        <p class="conclusion"><strong>CONCLUSION:</strong> Cars used to speed like crazy, now they 
+          are not speeding like crazy. Everyone is safer.</p>
+    </div>
+  
+    <a name="sidewalk"></a>
+    <div id="sidewalk">
+      <h1>Sidewalk Safety</h1>
+      <p>Riding a bike on a sidewalk is <strong>four times more dangerous</strong> than cycling in the road, and
+        any accident has a greater chance of involving pedestrians.</p>
+      <div class="bikes">
+        <div class="before">
+          <h3>Before the bike lane...</h3>
+          <p>Almost <strong class="bad">half</strong> of all bikes rode on the sidewalk.</p>
+          <div class="bar">
+            <div class="filler bad" style="width: 46%"></div>
+          </div>
+        </div>
+        <div class="after">
+          <h3>After the bike lane...</h3>
+          <p>Only <strong class="good">3%</strong> of bikes rode on the sidewalk.</p>
+          <div class="bar">
+            <div class="filler good" style="width: 3%"></div>
+          </div>
+        </div>
+        <p class="conclusion"><strong>CONCLUSION:</strong> Bicyclists used to be idiots, but now they've stopped 
+          riding on the sidewalk. Sidewalks are <em>much</em> safer for people and their tiny dogs. Bicyclists
+          are safer by not being on the sidewalk, too.</p>
+      </div>
+    </div>
+
+    <a name="popularity"></a>
+    <div id="popularity">
+      <h1>Bike Lane Popularity</h1>
+      <p>It doesn't have to do with safety, but seeing how used the bike lane is might tell us something.</p>
+      <div class="bikes">
+        <div class="before">
+          <h3>Before the bike lane...</h3>
+          <p>Around <strong>349</strong> cyclists used PPW on a given day.</p>
+          <div class="bar">
+            <div class="filler good" style="width: 35%"></div>
+          </div>
+        </div>
+        <div class="after">
+          <h3>After the bike lane...</h3>
+          <p>Around <strong>1010</strong> cyclists used PPW on a given day.</p>
+          <div class="bar">
+            <div class="filler good" style="width: 100%"></div>
+          </div>
+          <p>94% used the bike lane.</p>
+        </div>
+        <p class="conclusion"><strong>CONCLUSION:</strong> The number of bicyclists on Prospect Park West basically
+          <strong>tripled</strong>. I doubt anyone started biking <em>because</em> of the bike lane, so I'm guessing
+          they were on other, more dangerous streets beforehand. I think "popular <em>and</em> safe" is a rare combination.</p>
+      </div>
+    </div>  
+
+  
+    <a name="salmoning"></a>
+    <div id="salmoning">
+      <h1>Salmoning</h1>
+      <p><strong>Salmoning</strong> is riding a bike against the flow of traffic. It's dangerous, obviously.</p>
+      <div class="bikes">
+        <div class="before">
+          <h3>Before the bike lane...</h3>
+          <p>Almost <strong class="bad">5%</strong> of all bikes rode against traffic.</p>
+          <div class="bar">
+            <div class="filler bad" style="width: 5%"></div>
+          </div>
+        </div>
+        <div class="after">
+          <h3>After the bike lane...</h3>
+          <p>Only <strong class="good">2%</strong> of bikes rode against traffic*.</p>
+          <div class="bar">
+            <div class="filler good" style="width: 2%"></div>
+          </div>
+        </div>
+        <p class="tinynote">* Yes, the 'after' cyclists salmoning are eschewing the bike lane to ride <em>against traffic on the road.</em></p>
+        <p>So as not to be deceiving: <strong>16</strong> were counted before the lane and <strong>19</strong> were counted
+          after, so the actual number of salmoning cyclists between those 2 days actually increased.</p>
+        <p class="conclusion"><strong>CONCLUSION A:</strong> We tripled the number of cyclists using PPW, but
+          halved the percentage of them riding against the current.</p>
+        <p class="conclusion"><strong>CONCLUSION B:</strong> Yes, raw numbers are up, but I'd bet you anything that some of 
+          those 600 extra cyclists were previously salmoning up other streets.</p>
+      </div>
+    </div>  
+  
+    <a name="throughput"></a>
+    <div id="throughput">
+      <h1>Car Throughput</h1>
+      <p>The <strong>DoT</strong> counted cars during peak hours.</p>
+      <div class="bikes">
+        <div class="before">
+          <h3>Before the bike lane...</h3>
+          <p><strong>1,055</strong> cars went by Carroll St between 8-9 AM, and 
+            <strong>1,035</strong> cars went by 11th St between 4-5 PM.</p>
+        </div>
+        <div class="after">
+          <h3>After the bike lane...</h3>
+          <p><strong>1,109</strong> cars went by Carroll St between 8-9 AM, and 
+            <strong>1,008</strong> cars went by 11th St between 4-5 PM.</p>
+        </div>
+
+        <p class="conclusion"><strong>CONCLUSION:</strong> I'm sorry there isn't a chart, but that's
+          because pretty much <strong>nothing changed</strong>. Even people who don't walk or bike 
+          aren't really being affected by the bike lane.</p>
+      </div>
+    </div>  
+
+    <a name="congestion"></a>
+    <div id="congestion">
+      <h1>Congestion</h1>
+      <p>The <strong>DoT</strong> timed driving from Union St to 15th St during peak hours.</p>
+      <div class="bikes">
+        <div class="before">
+          <h3>Before the bike lane...</h3>
+          <p>On average, during peak hours, it took <strong>2:49</strong> to get from Union to 15th.</p>
+        </div>
+        <div class="after">
+          <h3>After the bike lane...</h3>
+          <p>On average, during peak hours, it took <strong>2:50</strong> to get from Union to 15th.</p>        
+        </div>
+
+        <p class="conclusion"><strong>CONCLUSION:</strong> Yes, it takes <em>1 second</em> longer.</p>
+      </div>
+    </div>
+
+    <a name="safety"></a>
+    <div id="safety">
+      <h1>Safety</h1>
+      <p>Wow, I somehow missed the 'Safety' section of the PDF the first few times through.</p>
+      <div class="bikes">
+        <div class="before">
+          <h3>Before the bike lane...</h3>
+          <p>On average, there were <strong class="bad">29 crashes</strong> every 6 months, and <strong class="very-bad">5 of them</strong> involved injuries.</p>
+          <div class="bar">
+            <div class="filler bad" style="width: 87%">
+              <div class="filler very-bad" style="width: 5%"></div>
+            </div>
+          </div>
+        </div>
+        <div class="after">
+          <h3>After the bike lane...</h3>
+          <p>There were <strong class="good">25 crashes</strong> in a comparable 6-month period, with <strong class="very-bad">only 2</strong> causing injuries.</p>        
+          <div class="bar">
+            <div class="filler good" style="width: 75%">
+              <div class="filler very-bad" style="width: 2%"></div>
+            </div>
+          </div>
+        </div>
+        <p>The bullet points contained the most the interesting part - there have been <em>no pedestrian injuries</em> 
+          since the bike lane was installed.</p>
+        <p class="conclusion"><strong>CONCLUSION:</strong> There are about 15% fewer crashes, as well as a very reduced
+          chance of them resulting in injury, despite the fact that there are <em>three times as many cyclists</em> using
+          the same space. I'm kinda impressed.</p>
+      </div>
+    </div>
+  
+    <a name="conclusion"></a>
+    <div id="ultimate-conclusion">
+      <h1>The Ultimate Conclusion</h1>
+      <p>By adding the bike lane, <strong>unsafe behavior</strong> by both cars and bikes has <strong>plummeted</strong>.
+        That's safer for everyone.</p>
+      <p>Beyond being safe, it <strong>hasn't caused any problems for motorists</strong>. Same number of cars, same
+        time to get down the street; everything's working just like it was before, except everything's safer.</p>
+      <p>I hear these days the anti-bike-lane crowd is trying to make the bike lane only go one way. It's probably
+        just going to make cyclists go back onto the sidewalk and cause more trouble there, or go down less safe streets
+        that don't have bike lanes (7th Ave is pretty bad news like that). If you don't like bikes, at least now you've
+        got them contained.</p>
+    </div>
+  
+    <a name="etc"></a>
+    <div id="whatever-else">
+      <h1>Et Cetera</h1>
+      <p>Howdy, I'm Soma!</p>
+      <p>I'm a developer living in Fort Greene who does a lot of work with data. You can check out other things I'm up to
+         at <a href="http://www.xoxosoma.com">xoxosoma.com</a> or on <a href="http://dangerscarf.tumblr.com">my tumblr</a>. Questions,
+         comments, and death threats/love letters can go to <a href="http://twitter.com/dangerscarf">@dangerscarf</a> or 
+         <a href="mailto:jonathan.soma@gmail.com">jonathan.soma@gmail.com</a>.</p>
+      <p>If you think learning stuff is awesome but you hate spending money, you should check out 
+        <a href="http://brooklynbrainery.com">Brooklyn Brainery</a>, a super-cheap school I help run down in Carroll Gardens.</p>
+    </div>
+  
+    <a name="math"></a>
+    <div id="math-data">
+      <h1>Math + Data</h1>
+
+      <p>All of my data is from the <a href="http://www.nyc.gov/html/dot/downloads/pdf/20110120_ppw.pdf">ugly PDF</a> from the 
+        Department of Transportation. If you'd like the excel sheets I made to do the mathy bits, just drop me an email.</p>
+      <p>I think the only math I did on my end was for bike counts (I used the 6/9/09 and 10/12/10 sets), averaging the
+        peak AM and PM times under 'Congestion' and counting how many cars were going 40+ MPH. If you'd like to
+        nitpick about sample size or anything, I hear you on that, but these trends seem pretty clear.</p>
+    </div>
+  </div>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-5541738-17', 'jonathansoma.com');
+    ga('send', 'pageview');
+
+  </script>
+</body>
+</html>
